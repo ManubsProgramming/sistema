@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Portaria Digital</title>
+
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+    <%= javascript_importmap_tags %>
+  </head>
+
+  <body>
+
+    <!-- CABEÇALHO -->
+    <header>
+      <h1>Condomínio – Sistema de Portaria</h1>
+    </header>
+
+    <!-- MENU -->
+    <nav>
+      <ul>
+        <li><%= link_to "Início", root_path %></li>
+        <li><%= link_to "Ocorrências", ocorrencias_path %></li>
+        <li><%= link_to "Reservas", reservas_path %></li>
+        <li><%= link_to "Comunicados", comunicados_path %></li>
+      </ul>
+    </nav>
+
+    <!-- CONTEÚDO DA VIEW -->
+    <main>
+      <%= yield %>
+    </main>
+
+    <!-- RODAPÉ -->
+    <footer>
+      <p>© 2025 - Sistema de Portaria</p>
+    </footer>
+
+  </body>
+</html>
